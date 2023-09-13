@@ -15,10 +15,9 @@ else
     exit 0
 fi
 
-
 apt update 
 apt upgrade -y
-apt install chrony gpsd -y
+apt install chrony gpsd pps-tools -y
 
 echo "RPi BOOT Config modification $BOOT_CONF"
 echo "" >> $BOOT_CONF
