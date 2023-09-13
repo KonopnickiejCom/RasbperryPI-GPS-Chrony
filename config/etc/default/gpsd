@@ -1,0 +1,13 @@
+# Devices gpsd should collect to at boot time.
+# They need to be read/writeable, either by user gpsd or the group dialout.
+
+# (c) Outosurcing IT - Konopnickiej.Com - https://konopnickiej.com
+# (c) FlameIT - Immersion Cooling - https://flameit.io
+# Author: Paweł 'felixd' Wojciechowski
+# GPS CLOCK -  PPS signals
+
+START_DAEMON="true"
+GPSD_OPTIONS="-n"
+DEVICES="/dev/ttyS0 /dev/pps0"
+USBAUTO="false"
+GPSD_SOCKET="/var/run/gpsd.sock"
