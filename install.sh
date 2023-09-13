@@ -1,11 +1,11 @@
 #!/bin/bash
 
 CHRONY_CONF=/etc/chrony/chrony.conf
-CHRONY_CONF_URL=
+CHRONY_CONF_URL=https://raw.githubusercontent.com/KonopnickiejCom/RasbperryPI-GPS-Chrony/main/config/etc/chrony/chrony.conf
 BOOT_CONF=/boot/config.txt
 BOOT_CMDLINE=/boot/cmdline.txt
 GPSD_CONF=/etc/default/gpsd
-GPSD_CONF_URL=
+GPSD_CONF_URL=https://raw.githubusercontent.com/KonopnickiejCom/RasbperryPI-GPS-Chrony/main/config/etc/default/gpsd
 
 if [ "$UID" -eq 0 ]; then
     echo "This script is being run by the root user."
