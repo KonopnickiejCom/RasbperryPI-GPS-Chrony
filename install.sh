@@ -46,13 +46,11 @@ echo "Removing console from serial0 in $BOOT_CMDLINE"
 sed -i 's/console=serial0,115200 //g' $BOOT_CMDLINE
 
 echo "Updating Chrony configuration"
-rm $CHRONY_CONF
-wget -O $CHRONY_CONF 
+wget -O $CHRONY_CONF $CHRONY_CONF_URL
 chmod 644 $CHRONY_CONF
 
 echo "Updating GPSD configuration"
-rm $GPSD_CONF
-wget -O $GPSD_CONF
+wget -O $GPSD_CONF $GPSD_CONF_URL
 chmod 644 $GPSD_CONF
 
 echo "Restarting GPSD service"
