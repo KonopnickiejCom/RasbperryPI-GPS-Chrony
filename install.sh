@@ -52,6 +52,10 @@ echo "Updating GPSD configuration"
 wget -O $GPSD_CONF $GPSD_CONF_URL
 chmod 644 $GPSD_CONF
 
+ethtool --show-eee eth0
+ethtool --set-eee eth0 eee off
+ethtool --show-eee eth0
+
 echo "Restarting GPSD service"
 service gpsd restart
 
